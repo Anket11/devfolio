@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="AP">
+  <title>AP</title>
+  <rect width="32" height="32" rx="8" fill="#111111"/>
+  <g fill="#ffffff">
+    <path d="M6 22h2.15l1.35-3.25h5.1L15.95 22h2.2L13.05 10h-1.95L6 22zm4.2-5.05 1.85-4.45 1.85 4.45h-3.7z"/>
+    <path d="M19.4 22V10h4.05c2.65 0 4.55 1.65 4.55 4s-1.9 4-4.55 4H21.5v4h-2.1zm2.1-5.85h1.8c1.55 0 2.55-.8 2.55-2.15s-1-2.15-2.55-2.15h-1.8v4.3z"/>
+  </g>
+</svg>
