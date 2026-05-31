@@ -3,8 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://anket11.github.io',
-  base: '/devfolio',
+  site: 'https://www.anketpatil.com',
   vite: {
     plugins: [tailwindcss()]
   }
