@@ -38,7 +38,16 @@ export const experience: Role[] = [
     current: false,
     bullets: [
       'GPA: 3.7/4.0, Magna Cum Laude.',
-      'Focused on systems, AI infrastructure, and data-intensive software engineering.',
+      'E-Board, Poker Club.',
+    ],
+  },
+  {
+    title: 'B.Tech, Information Technology',
+    company: 'University of Mumbai, India',
+    period: 'Jul 2020 - May 2024',
+    current: false,
+    bullets: [
+      'CGPA: 9.27/10.',
     ],
   },
 ];
