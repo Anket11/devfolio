@@ -21,7 +21,7 @@ export const experience: Role[] = [
   },
   {
     title: 'Research Engineer',
-    company: 'EDUJO Labs',
+    company: 'EDU.IO',
     period: 'Jan 2023 - May 2024',
     current: false,
     bullets: [

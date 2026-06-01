@@ -68,6 +68,15 @@ function iconUrl(rel: string): string {
       );
       document.querySelectorAll('.fade-in').forEach((el) => io.observe(el));
     </script>
+    <script>
+      if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const script = document.createElement('script');
+        script.src = '/vendor/oneko.js';
+        script.dataset.cat = '/vendor/oneko.gif';
+        script.defer = true;
+        document.body.appendChild(script);
+      }
+    </script>
   </body>
 </html>
 

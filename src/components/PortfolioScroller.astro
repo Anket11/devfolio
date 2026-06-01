@@ -27,6 +27,7 @@ const projects: ShowcaseProject[] = [
     name: 'LangTrail',
     tagline: 'Reverse proxy and review layer for monitoring LLM agent systems without SDKs or code instrumentation.',
     github: 'https://github.com/Anket11/LangTrail',
+    liveLink: 'https://langtrail-dashboard.onrender.com/review',
     bullets: [
       'Architected a Rust-based reverse proxy that captures AI agent traffic transparently without modifying existing codebases.',
       'Designed an LLM-assisted review layer that generates critiques, suggested labels, failure signals, and confidence scores while keeping human approval as the final decision.',
@@ -56,9 +57,10 @@ const projects: ShowcaseProject[] = [
   {
     name: 'UN Ahead of the Storm Hackathon',
     tagline: '1st place geospatial child vulnerability system for Cyclone Amphan risk response.',
-    liveLink: 'https://cs.engineering.gwu.edu/gw-engineering-students-win-big-un-hackathon',
+    liveLink: 'https://anket11.github.io/ahead-of-the-storm/amphan.html',
     bullets: [
       'Built a dashboard quantifying 494K+ children at risk and 666 critical facilities across Bangladesh.',
+      'Ran the analysis purely on geospatial data to model vulnerability and infrastructure exposure around Cyclone Amphan.',
       'Used Python, GeoPandas, Rasterio, and Plotly to deliver an interactive tool for UN officials.',
     ],
   },
@@ -137,7 +139,7 @@ const projects: ShowcaseProject[] = [
             sub-200ms p99 latency.
           </p>
           <p class="story-para">
-            Previously at <strong>EDUJO Labs</strong>, I engineered a full-stack AI-powered LMS and a course-grounded
+            Previously at <strong>EDU.IO</strong>, I engineered a full-stack AI-powered LMS and a course-grounded
             RAG chatbot. That work supported <strong class="stat">200+ generated courses</strong>, <strong class="stat">25K+ learner
             interactions</strong>, and a 4.2/5 average chatbot rating.
           </p>
@@ -185,7 +187,7 @@ const projects: ShowcaseProject[] = [
     <div class="panel-content">
       <div class="fade-in header">
         <h1>Projects</h1>
-        <p class="sub">AI systems, data infrastructure, and hackathon builds.</p>
+        <p class="sub">Full Stack, AI Systems, data infrastructure, and hackathon builds.</p>
       </div>
 
       <div class="project-grid">
@@ -207,7 +209,7 @@ const projects: ShowcaseProject[] = [
                     <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                       <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 1 0-1h5.793L8.146 4.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 7.5H4.5z"/>
                     </svg>
-                    <span class="link-label">Link</span>
+                    <span class="link-label">Live</span>
                   </a>
                 )}
               </div>
@@ -285,13 +287,14 @@ const projects: ShowcaseProject[] = [
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
     background: var(--bg);
   }
 
   .snap-panel {
-    height: 100vh;
-    height: 100dvh;
-    overflow-y: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     padding: 6.75rem 1.5rem 2rem;
@@ -570,6 +573,7 @@ const projects: ShowcaseProject[] = [
 
   @media (max-width: 560px) {
     .snap-panel { padding: 5.8rem 1.2rem 1.4rem; }
+    .snap-scroll { scroll-padding-top: 0; }
     .hero-top { flex-direction: column; text-align: center; gap: 1.35rem; }
     .photo { width: 150px; height: 150px; }
     .photo span { font-size: 3.35rem; }
