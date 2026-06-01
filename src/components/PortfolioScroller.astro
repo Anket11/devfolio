@@ -9,8 +9,9 @@ type Props = {
 type ShowcaseProject = {
   name: string;
   tagline: string;
-  github?: string;
   liveLink?: string;
+  articleLink?: string;
+  github?: string;
   bullets: string[];
 };
 
@@ -36,6 +37,17 @@ const projects: ShowcaseProject[] = [
     ],
   },
   {
+    name: 'Sage: Cognitive AI Architecture',
+    tagline: 'Brain-inspired AI system that learns from conversations by building semantic knowledge graphs, reducing hallucination versus naive RAG.',
+    liveLink: 'https://huggingface.co/spaces/Anket11/Sage',
+    bullets: [
+      'Architected a 4-layer memory system spanning sensory, semantic, episodic, and working memory; built an automated sleep cycle that consolidates memories, prunes noise, and reinforces high-confidence relationships nightly.',
+      'Implemented hybrid graph plus vector RAG using Neo4j, ChromaDB, and Groq inference; extracts clean semantic nodes instead of raw text chunks to reduce token usage and improve reasoning accuracy.',
+      'Created interactive 3D visualizations of agent cognition in real time and deployed the full-stack system on Hugging Face Spaces with Docker, concurrent-user handling, and persistent Neo4j storage.',
+      'Built with FastAPI, React, Neo4j, Groq (Llama 3.1), LangChain, ChromaDB, and Docker.',
+    ],
+  },
+  {
     name: 'NLX Job Knowledge Graph Pipeline',
     tagline: 'High-throughput job intelligence pipeline that extracts skills, knowledge, and tasks into a graph.',
     bullets: [
@@ -58,6 +70,8 @@ const projects: ShowcaseProject[] = [
     name: 'UN Ahead of the Storm Hackathon',
     tagline: '1st place geospatial child vulnerability system for Cyclone Amphan risk response.',
     liveLink: 'https://anket11.github.io/ahead-of-the-storm/amphan.html',
+    articleLink: 'https://cs.engineering.gwu.edu/gw-engineering-students-win-big-un-hackathon',
+    github: 'https://github.com/Anket11/ahead-of-the-storm/tree/main',
     bullets: [
       'Built a dashboard quantifying 494K+ children at risk and 666 critical facilities across Bangladesh.',
       'Ran the analysis purely on geospatial data to model vulnerability and infrastructure exposure around Cyclone Amphan.',
@@ -67,6 +81,7 @@ const projects: ShowcaseProject[] = [
   {
     name: 'GW George Hacks',
     tagline: '1st place LLM-powered metadata automation system for open-source GitHub projects.',
+    github: 'https://github.com/Anket11/PS-1-George-Hacks-Bytans',
     bullets: [
       'Built an automation workflow using Python, LangChain, and the GitHub API.',
       'Generated useful repository metadata to reduce manual project maintenance work.',
@@ -196,20 +211,28 @@ const projects: ShowcaseProject[] = [
             <div class="proj-header">
               <h2 class="proj-name">{p.name}</h2>
               <div class="proj-links">
-                {p.github && (
-                  <a href={p.github} target="_blank" rel="noopener" class="project-link mono" aria-label="GitHub">
-                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                    <span class="link-label">GitHub</span>
-                  </a>
-                )}
                 {p.liveLink && (
                   <a href={p.liveLink} target="_blank" rel="noopener" class="project-link mono" aria-label="Live link">
                     <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                       <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM4.5 7.5a.5.5 0 0 1 0-1h5.793L8.146 4.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 7.5H4.5z"/>
                     </svg>
                     <span class="link-label">Live</span>
+                  </a>
+                )}
+                {p.articleLink && (
+                  <a href={p.articleLink} target="_blank" rel="noopener" class="project-link mono" aria-label="Article link">
+                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                      <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h6.879a1.5 1.5 0 0 1 1.06.44l1.121 1.121A1.5 1.5 0 0 1 14 3.621V13.5A1.5 1.5 0 0 1 12.5 15h-8A1.5 1.5 0 0 1 3 13.5v-11zm2 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 3a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H5z"/>
+                    </svg>
+                    <span class="link-label">Article</span>
+                  </a>
+                )}
+                {p.github && (
+                  <a href={p.github} target="_blank" rel="noopener" class="project-link mono" aria-label="GitHub">
+                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    <span class="link-label">GitHub</span>
                   </a>
                 )}
               </div>
